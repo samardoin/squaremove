@@ -9,6 +9,20 @@
     <script src="/render.js"></script>
   </header>
   <body>
-    Server is up.
+    The server is up and running!
+    <script>
+    var socket = io.connect('172.217.21.212:65080');
+    //var socket = io.connect();
+
+    socket.on('game_loop',function(updated_players){
+      if (loaded){
+        players = updated_players;//getPlayers
+        renderAll();//render
+        socket.emit('player_input',inputter);//send input
+      }
+    });
+
+    socket.emit('connection_successful','nul');
+    </script>
   </body>
 </html>
