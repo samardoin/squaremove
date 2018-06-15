@@ -68,4 +68,4 @@ async function update(){
     io.to('update_room').emit('game_loop',pl);
   },1000/framesPerSecond);
 }
-//update();
+update();
