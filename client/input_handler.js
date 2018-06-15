@@ -28,7 +28,7 @@ function addEventLiseners(){
         case 37:
             //alert('left');
             inputter.left=false;
-            console.console.log("Left");
+            //console.console.log("Left");
             break;
         case 38:
             //alert('up');
